@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react";
 
-const VideoCard = ({ height , width }) => {
-    return (
-      <div
-        className={` bg-red-300 rounded-2xl transition-all duration-500`}
-        style={{ height , width}}
-      ></div>
-    );
-  };
+const VideoCard = ({ height, width, borderRadius }) => {
+  return (
+    <div
+      className="bg-red-300 transition-all duration-500"
+      style={{ height, width, borderRadius }}
+    ></div>
+  );
+};
 
-export default VideoCard
+export default VideoCard;

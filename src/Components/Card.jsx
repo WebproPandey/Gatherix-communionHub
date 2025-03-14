@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Card = () => {
+const Card = ({height , width ,background}) => {
   return (
-    <div className='h-[70%] w-full border-[1px] rounded-2xl'>
+    <div className={` border-[1px] rounded-2xl transition-all duration-500`}
+    style={{ height , width ,background}}>
         
     </div>
   )
