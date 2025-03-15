@@ -1,8 +1,45 @@
 import React from "react";
 import VideoCard from "../Components/VideoCard";
 import Card from "../Components/Card";
+import MommentCard from "../Components/MommentCard";
+
+
+import  Gatherings from "../assets/community-gathering.webp"
+import  Cultural from "../assets/holi.avif"
+import  Faith from "../assets/faith-event.jpg"
+import  Charity from "../assets/Charity.avif"
+import  Networking from "../assets/Networking.jpg"
+import  Workshops from "../assets/WorkshopsSharing.avif"
+import  Virtual from "../assets/VirtualCelebrations.jpg"
+import  Projects from "../assets/project.jpeg"
+import TeamCard from "../Components/TeamCard";
+import hindu from "../assets/hinducommunity.png";
 
 const Home = () => {
+
+  const momentsData = [
+    { image: Gatherings, title: "Community Gatherings", description: "Bringing people together to share, learn, and grow as a united community." },
+    { image: Cultural, title: "Cultural Festivals", description: "Showcasing diverse traditions, music, and art to promote inclusivity." },
+    { image: Faith, title: "Faith-Based Events", description: "Spiritual meetups, prayers, and discussions that strengthen belief and unity." },
+    { image: Charity, title: "Charity & Volunteer Drives", description: "Giving back to society by supporting causes that matter." },
+    { image: Networking, title: "Networking Meetups", description: "Creating opportunities for individuals to connect and collaborate." },
+    { image: Workshops, title: "Workshops & Knowledge Sharing", description: "Learning and inspiring each other through skill-based sessions." },
+    { image: Virtual, title: "Virtual Celebrations", description: "Engaging global audiences through live-streamed events and online interactions." },
+    { image: Projects, title: "Social Impact Projects", description: "Working together to create meaningful change in communities." }
+  ];
+
+  const communitiesData = [
+    {image: hindu , name:"joyti  Rathod" ,  communities:"Hindu Event origanious"},
+    {image: hindu , name:"joyti  Rathod" ,  communities:"Hindu Event origanious"},
+    {image: hindu , name:"joyti  Rathod" ,  communities:"Hindu Event origanious"},
+    {image: hindu , name:"joyti  Rathod" ,  communities:"Hindu Event origanious"},
+    {image: hindu , name:"joyti  Rathod" ,  communities:"Hindu Event origanious"},
+    {image: hindu , name:"joyti  Rathod" ,  communities:"Hindu Event origanious"},
+    {image: hindu , name:"joyti  Rathod" ,  communities:"Hindu Event origanious"},
+    {image: hindu , name:"joyti  Rathod" ,  communities:"Hindu Event origanious"},
+  ]
+
+
   return (
     <div className="  w-full flex flex-col justify-center pt-[8vw]">
 
@@ -106,6 +143,8 @@ const Home = () => {
 
         </div>
       </div>
+
+
       <div className="w-full px-[4vw] py-10 flex flex-col items-center justify-start bg-gradient-to-b to-gray-500 from-black">
       <h1 className="text-[3vw] poppins-semibold text-white " >Global Impact, Endless Connections</h1>
       <div className="w-[70%] mt-4">
@@ -136,17 +175,60 @@ const Home = () => {
           <div className="w-full h-[30%] ">
           <h1 className="text-[1.5vw] poppins-bold   "> Purpose-Driven Connections</h1>
           <p className="text-[1.3vw] poppins-medium ">More than just events, we create opportunities that bring positive change to individuals and communities.
-Every gathering is designed to inspire, uplift, and make a lasting impact on those who participate.
-
-Let me know if you need any further refinements.</p>
+          Every gathering is designed to inspire, uplift, and make a lasting impact on those who participate.
+          Let me know if you need any further refinements.</p>
           </div>
 
 
 
         </div>
         
+      </div>
+
+      </div>
+
+      <div className=" w-full px-[4vw] py-12 flex flex-col items-center justify-start">
+      <h1 className="text-[3vw] poppins-semibold text-black " >Celebrating the Connections We’ve Built</h1>
+      <div className="w-[70%] my-4">
+       <p className="text-[1.5vw] text-black poppins-medium  text-center ">Discover the meaningful relationships and collaborations we’ve nurtured, uniting people from all walks of life through shared experiences.</p>
+      </div>
+      <button className="bg-gray-400 text-[1.2vw] px-6 py-1 rounded-full poppins-medium group flex items-center gap-2 transition-all duration-300 hover:bg-gray-500">
+              View All Momment
+              <i className="ri-arrow-drop-right-line text-[1.5vw] transform transition-transform duration-300 group-hover:rotate-90"></i>
+          </button>
+       <div className="min-h-screen  w-full flex justify-between  mt-[4vw] ">
+        <div className="min-h-screen  w-[30%] flex  flex-col  gap-12 ">
+        <MommentCard height="60vh" width="100%"  {...momentsData[0]} />
+        <MommentCard height="80vh" width="100%" {...momentsData[1]}/>
+        </div>
+        <div className="min-h-screen w-[30%] flex  flex-col  gap-12 ">
+        <MommentCard height="80vh" width="100%" {...momentsData[2]}/>
+        <MommentCard height="60vh" width="100%" {...momentsData[3]}/>
+        </div>
+        <div className="min-h-screen w-[30%] flex  flex-col  gap-12 ">
+        <MommentCard height="60vh" width="100%" {...momentsData[4]}/>
+        <MommentCard height="80vh" width="100%" {...momentsData[5]}/>
         </div>
 
+        </div>   
+
+      </div>
+
+      <div className="w-full px-[4vw] py-12 flex flex-col items-center justify-start bg-gradient-to-b to-gray-500 from-black">
+      <h1 className="text-[3vw] poppins-semibold text-white " >Meet Our Dedicated Team</h1>
+      <div className="w-[70%] my-4">
+       <p className="text-[1.5vw] text-white poppins-medium  text-center ">Bringing together innovation, faith, and community, our expert  team is committed to building a platform where connections thrive. With a shared passion for technology and inclusivity, we work to create meaningful experiences that inspire and unite people from all walks of life.</p>
+      </div>
+       <div className="min-h-screen  w-full mt-[4vw] grid grid-cols-4 gap-3 ">
+        <TeamCard  {...communitiesData[0]}  />
+        <TeamCard  {...communitiesData[1]}  />
+        <TeamCard  {...communitiesData[2]}  />
+        <TeamCard  {...communitiesData[3]}  />
+        <TeamCard  {...communitiesData[4]}  />
+        <TeamCard  {...communitiesData[5]}  />
+        <TeamCard  {...communitiesData[6]}  />
+        <TeamCard  {...communitiesData[7]}  />
+       </div>
       </div>
     </div>
   );
