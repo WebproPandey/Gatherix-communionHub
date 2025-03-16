@@ -2,6 +2,7 @@ import React from "react";
 import VideoCard from "../Components/VideoCard";
 import Card from "../Components/Card";
 import MommentCard from "../Components/MommentCard";
+import  SwiperSectione  from "../Components/SwiperSection"
 
 
 import  Gatherings from "../assets/community-gathering.webp"
@@ -14,6 +15,7 @@ import  Virtual from "../assets/VirtualCelebrations.jpg"
 import  Projects from "../assets/project.jpeg"
 import TeamCard from "../Components/TeamCard";
 import hindu from "../assets/hinducommunity.png";
+import Faq from "../Components/Faq";
 
 const Home = () => {
 
@@ -99,7 +101,7 @@ const Home = () => {
       </div>
       </div>
 
-      <div className="h-screen bg-[#0000]/80 flex flex-col  justify-center items-center pt-[6vw] px-[4vw]">
+      <div className="h-screen bg-gradient-to-b to-gray-500 from-black flex flex-col  justify-center items-center pt-[6vw] px-[4vw]">
         <h1 className="text-[3vw] poppins-semibold text-white ">Why Communion Rocks!</h1>
         <div className="bottomcontent w-full flex h-full ">
           <div className="left w-[30%] h-full   flex items-center ">
@@ -230,6 +232,34 @@ const Home = () => {
         <TeamCard  {...communitiesData[7]}  />
        </div>
       </div>
+     
+      <div className=" w-full  px-[4vw] py-[4vw] flex flex-col items-center justify-start ">
+        <h1 className="text-[3vw] poppins-semibold text-black " >Growing Strong with 1500+ Users</h1>
+        <div className="w-[70%] my-4">
+          <p className="text-[1.5vw] text-black te poppins-medium  text-center ">Be part of a trusted platform where thousands of users come together to inspire, innovate, and connect.</p>
+        </div>   
+        <div className=" w-full mt-[5vw]">
+          <SwiperSectione/>
+        </div>     
+
+      </div>
+
+      <div className=" w-full px-[4vw] py-[4vw] flex  flex-col  items-center  justify-start  bg-gradient-to-b to-gray-500 from-black ">
+      <h1 className="text-[3vw] poppins-semibold text-white " > Need Help? We've Got You Covered</h1>
+      <div className="w-[70%] my-4">
+          <p className="text-[1.5vw] text-white te poppins-medium  text-center ">Explore answers to frequently asked questions.</p>
+      </div>
+
+      <div className="w-full">
+       <Faq/>
+      </div>  
+
+      </div>
+
+      
+
+
+
     </div>
   );
 };
