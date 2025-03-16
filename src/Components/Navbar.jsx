@@ -1,8 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react'
 import logo from '../assets/Frame.png'
 import { Link } from 'react-router'
+import { useClerk , UserButton , useUser } from '@clerk/clerk-react' 
 
 const Navbar = () => {
+  const {openSignIn} = useClerk()
+  const {user} =  useClerk()
+
+
   const [activeDropdown, setActiveDropdown] = useState(null);
   const dropdownRef = useRef(null);
 
@@ -71,9 +76,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="right">
-        <button className='px-4 py-2 bg-cyan-500 text-black rounded-md'>
+        {user ? <UserButton/>  :
+        <button onClick={() => openSignIn()}  className='px-4 py-2 bg-cyan-500 text-black rounded-md'>
           SignUp
         </button>
+        }
       </div>
     </div>
   )

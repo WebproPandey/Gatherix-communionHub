@@ -3,6 +3,7 @@ import VideoCard from "../Components/VideoCard";
 import Card from "../Components/Card";
 import MommentCard from "../Components/MommentCard";
 import  SwiperSectione  from "../Components/SwiperSection"
+import Faq from "../Components/Faq";
 
 
 import  Gatherings from "../assets/community-gathering.webp"
@@ -15,7 +16,21 @@ import  Virtual from "../assets/VirtualCelebrations.jpg"
 import  Projects from "../assets/project.jpeg"
 import TeamCard from "../Components/TeamCard";
 import hindu from "../assets/hinducommunity.png";
-import Faq from "../Components/Faq";
+import  spanimg1  from "../assets/spanimg1.jpg"
+import  spanimg2  from "../assets/spanimg2.jpg"
+import  video2  from "../assets/video2.png"
+import  video1  from "../assets/video1.png"
+import  video3  from "../assets/video3.png"
+import  callender  from "../assets/callender.webp"
+import  togther1 from "../assets/togther.jpg"
+import  togther2 from "../assets/togther2.jpg"
+import  togther3 from "../assets/togther3.jpg"
+import  togther4 from "../assets/togther4.jpg"
+import  togther5 from "../assets/togther5.jpg"
+import  togther6 from "../assets/togther6.jpg"
+import MemmoeryCard from "../Components/MemmoeryCard";
+
+
 
 const Home = () => {
 
@@ -41,6 +56,24 @@ const Home = () => {
     {image: hindu , name:"joyti  Rathod" ,  communities:"Hindu Event origanious"},
   ]
 
+  const CardData = [
+    {title:"Meet People Who Inspire You" ,   disc:"From volunteering opportunities to mission-driven events, CommunionHub helps you build meaningful relationships with those who share your values and goals."},
+    {title:" Serve, Support, and Grow" ,   disc:"Find volunteer opportunities, charity events, and outreach programs that allow you to give back and make a real difference in your community."},
+    {title:"Join a Community of Believers" ,   disc:"Connect with like-minded individuals through spiritual events, prayer circles, and worship gatherings. Whether online or in-person, deepen your faith with a supportive community."},
+  ]
+
+  const  imageData = [
+    {image:togther1},
+    {image:togther2},
+    {image:togther3},
+    {image:togther4},
+    {image:togther5},
+    {image:togther6},
+  ]
+
+
+
+
 
   return (
     <div className="  w-full flex flex-col justify-center pt-[8vw]">
@@ -59,17 +92,23 @@ const Home = () => {
         <div className="leftheading  h-full w-1/2 flex flex-col  justify-center">
           <div className="text-[3.4vw] poppins-semibold tracking-tighter flex items-center  gap-2 ">
             Together We Build{" "}
-            <span className="h-[10vh] w-[12vw] rounded-3xl bg-red-200 inline-block"></span>
+            <span className="h-[10vh] w-[12vw] rounded-3xl bg-red-200 inline-block overflow-hidden">
+              <img src={spanimg1} className="w-full  h-full  object-cover" alt="" />
+            </span>
           </div>
 
           <div className="text-[3.4vw] poppins-semibold tracking-tighter flex items-center  gap-2 ">
-            <span className="h-[10vh] w-[12vw] rounded-3xl bg-red-200 inline-block"></span>{" "}
+            <span className="h-[10vh] w-[12vw] rounded-3xl bg-red-200 inline-block overflow-hidden">
+            <img src={spanimg2} className="w-full h-full  object-cover" alt="" />
+            </span>
             Together We Thrive
           </div>
 
           <div className="text-[3.4vw] poppins-semibold tracking-tighter flex items-center  gap-2 ">
             One Platform{" "}
-            <span className="h-[10vh] w-[12vw] rounded-3xl bg-red-200 inline-block"></span>{" "}
+            <span className="h-[10vh] w-[12vw] rounded-3xl bg-red-200 inline-block overflow-hidden">
+            <img src={video2} className="w-full h-full   object-cover" alt="" />
+            </span>
           </div>
 
           <div className="text-[3.4vw] poppins-semibold tracking-tighter flex items-center  gap-2 ">
@@ -89,14 +128,16 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="rightvideo h-full flex flex-col  items-center justify-between w-1/2 relative py-10">
-          <div className="w-full h-full flex items-center justify-center ">
-            <VideoCard height="100%" width="90%"  borderRadius="20px"  />
+        <div className="rightvideo min-h-full flex flex-col gap-2  items-center justify-between w-1/2 relative py-10">
+        <div className="w-full  h-[35vh]  flex justify-center  items-center ">
+            <VideoCard height="100%" width="90%"  borderRadius="20px"  data={callender} />
           </div>
-          <div className="w-full h-full flex items-center gap-2 justify-center ">
-            <VideoCard height="90%" width="45%"  borderRadius="20px" />
-            <VideoCard height="90%" width="45%"  borderRadius="20px" />
+        <div className="w-full h-[35vh] flex items-center gap-4  justify-center   ">
+            <VideoCard height="100%" width="45%"  borderRadius="20px"  data={video1} />
+            <VideoCard height="100%" width="45%"  borderRadius="20px"   data={video3} />
           </div>
+       
+         
         </div>
       </div>
       </div>
@@ -108,9 +149,9 @@ const Home = () => {
             <p className="text-[1.3vw] text-white poppins-medium  ">CommunionHub is more than just an event platform—it's a movement that brings people together through faith, purpose, and connection. Whether you're looking to join a spiritual gathering, volunteer for a cause, or simply meet like-minded individuals, CommunionHub makes it easy, engaging, and meaningful.</p>
           </div>
           <div className="right w-[70%] flex  justify-between  items-center gap-4 pl-[4vw] ">
-             <Card height="60%" width="30%"    />
-             <Card height="60%" width="30%"   />
-             <Card height="60%" width="30%"  />
+             <Card height="60%" width="30%" {...CardData[0]}   />
+             <Card height="60%" width="30%" {...CardData[1]}  />
+             <Card height="60%" width="30%" {...CardData[2]} />
           </div>
         </div>
 
@@ -131,16 +172,16 @@ const Home = () => {
           </div>
         </div>
         <div className="ExperiencesWraper flex items-center  gap-3 w-full  h-screen ">
-          <Card height="80%" width="25%" background="#131313" />
+          <MemmoeryCard height="80%" width="25%"   {...imageData[0]} />
           <div className="w-[25%] flex flex-col  gap-3 h-full ">
-          <Card height="40%" width="100%" background="#131313" />
-          <Card height="60%" width="100%" background="#131313"/>
+          <MemmoeryCard height="40%" width="100%"   {...imageData[1]} />
+          <MemmoeryCard height="60%" width="100%"   {...imageData[2]}/>
           </div>
           <div className="w-[25%] h-full  flex flex-col  gap-3  ">
-          <Card height="60%" width="100%"background="#131313" />
-          <Card height="40%" width="100%"background="#131313" />
+          <MemmoeryCard height="60%" width="100%" {...imageData[3]}  />
+          <MemmoeryCard height="40%" width="100%"  {...imageData[4]}/>
           </div>
-          <Card height="80%" width="25%" background="#131313"/>
+          <MemmoeryCard height="80%" width="25%"   {...imageData[5]}/>
 
 
         </div>
@@ -154,8 +195,8 @@ const Home = () => {
       </div>
       <div className="h-screen w-full flex items-center  justify-center  mt-[5vw]">
         <div className="w-[60%] h-full flex gap-3 items-center  ">
-        <VideoCard height="80%" width="40%"  borderRadius="150px"   /> 
-        <VideoCard height="80%" width="40%"  borderRadius="150px"  /> 
+        <VideoCard height="80%" width="40%"  borderRadius="150px"  data={video1}  /> 
+        <VideoCard height="80%" width="40%"  borderRadius="150px"  data={video3} /> 
         </div>
         <div className="w-[40%] h-full text-white flex flex-col items-center justify-center  gap-4 py-[3vw] ">
           <div className="w-full h-[30%] ">

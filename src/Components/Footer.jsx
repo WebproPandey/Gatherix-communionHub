@@ -29,7 +29,7 @@ useEffect(()=>{
             </div>
             <div>
             <p className="text-[1.2vw] text-black">
-            Discover the power of connection with Communion. Uniting diverse communities through spirituality and innovation, we foster inclusivity, collaboration, and social cohesion for a better world.
+               Discover the power of connection with Communion. Uniting diverse communities through spirituality and innovation, we foster inclusivity, collaboration, and social cohesion for a better world.
             </p>
             </div>
         </div>

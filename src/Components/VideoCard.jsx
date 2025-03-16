@@ -1,11 +1,13 @@
 import React from "react";
 
-const VideoCard = ({ height, width, borderRadius }) => {
+const VideoCard = ({ height, width, borderRadius , data }) => {
   return (
     <div
-      className="bg-red-300 transition-all duration-500"
+      className="transition-all duration-500 overflow-hidden"
       style={{ height, width, borderRadius }}
-    ></div>
+    >
+     <img src={data} className=" w-full h-full" alt=""/>
+    </div>
   );
 };
 
