@@ -9,15 +9,14 @@ const DiscoverEvent = () => {
     if (storedEvents) {
       let parsedEvents = JSON.parse(storedEvents);
 
-      // 🔹 Filter out expired events
       const today = new Date();
       const validEvents = parsedEvents.filter(event => {
         const eventEndDate = new Date(event.endDate);
-        return eventEndDate >= today; // 🔹 Remove if event is expired
+        return eventEndDate >= today; 
       });
 
       setEvents(validEvents);
-      localStorage.setItem("events", JSON.stringify(validEvents)); // 🔹 Update storage
+      localStorage.setItem("events", JSON.stringify(validEvents)); 
     }
   }, []);
 
@@ -50,13 +49,13 @@ const DiscoverEvent = () => {
 
       {/* 🔹 Filter Buttons */}
       <div className="eventfilter w-full flex h-[10vh] justify-center items-center">
-        <div className="w-[60%] flex gap-3 justify-center items-center">
+        <div className="w-full md:w-[60%] flex gap-3 justify-center items-center">
           {["All", "Today", "Tomorrow", "This Week", "This Month"].map(
             (option) => (
               <button
                 key={option}
                 onClick={() => setFilter(option)}
-                className={`px-4 py-2 rounded-full border-[1px] ${
+                className={`text-[2vw] md:text-base  px-4 py-1 md:py-2 rounded-full border-[1px] ${
                   filter === option ? "bg-gray-800 text-white" : "bg-white"
                 }`}
               >
@@ -68,33 +67,33 @@ const DiscoverEvent = () => {
       </div>
 
       {/* 🔹 Events Grid */}
-      <div className="min-h-[50vh] w-full grid grid-cols-4 gap-4">
+      <div className="min-h-[50vh] w-full grid grid-cols-2 md:grid-cols-4 gap-4">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event, index) => (
-            <div key={index} className="border p-4 rounded-md shadow-md h-[70vh] flex flex-col justify-between">
+            <div key={index} className="border p-4 rounded-md gap-2 shadow-md h-full md:h-[70vh] flex flex-col justify-between">
               {event.image && (
                 <img
                   src={event.image}
                   alt="Event"
-                  className="w-full h-48 object-cover rounded-md"
+                  className="w-full h-32 md:h-48 object-cover rounded-md"
                 />
               )}
-              <h3 className="text-xl font-bold mt-3 capitalize">
+              <h3 className="text-[3vw] md:text-xl font-bold mt-3 capitalize">
                 {event.eventName}
               </h3>
-              <p className="text-gray-700">
+              <p className=" text-[2.8vw] md:text-base text-gray-700">
                 📍 <strong>Location:</strong> {event.location}
               </p>
-              <p className="text-gray-700">
+              <p className="text-[2.8vw] md:text-base  text-gray-700">
                 🕒 <strong>Start:</strong> {event.startDate}
               </p>
-              <p className="text-gray-700">
+              <p className="text-[2.8vw] md:text-base text-gray-700">
                 🕒 <strong>End:</strong> {event.endDate}
               </p>
-              <p className="text-gray-700 line-clamp-2">
+              <p className="text-[2.8vw] md:text-base text-gray-700 line-clamp-2">
                 📝 <strong>Description:</strong> {event.description}
               </p>
-              <div className="button px-4 py-2 bg-gray-600 text-center font-semibold rounded-md">
+              <div className="button px-4 md:py-2 py-1 bg-gray-600 text-center font-semibold rounded-md">
                 Event Details
               </div>
             </div>

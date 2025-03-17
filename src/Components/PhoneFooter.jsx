@@ -10,8 +10,8 @@ const PhoneFooter = () => {
          <div className='flex flex-col w-full items-center justify-center gap-[30px] '>
            <div className='logo flex flex-col justify-start items-start gap-2'>
                       <div className='flex  justify-center items-center'>
-                      <img src={logo} className='h-[5vh]' alt="" />
-                      <h1 className='poppins-bold text-[2vw] text-[#A98AD3]'>Gatherix</h1>
+                      <img src={logo} className='h-[7vw] md:h-[5vh]' alt="" />
+                      <h1 className='poppins-bold text-[3vw]  md:text-[2vw] text-[#A98AD3]'>Gatherix</h1>
                       </div>
                       <div>
                       <p className="md:text-[1.2vw] text-base text-black">
@@ -38,7 +38,7 @@ const PhoneFooter = () => {
          </div>
 
          <div className=" mt-[28px] text-white p-2  w-full bg-[#414141] rounded-lg  h-[256px] after:bg-black" >
-            <h3 className="font-bold text-lg mb-4 text-orange-500">Subscribe</h3>
+            <h3 className="font-bold text-lg mb-4 text-black">Subscribe</h3>
             <form className="flex items-center gap-2 mb-4">
               <input
                 type="email"
@@ -51,7 +51,10 @@ const PhoneFooter = () => {
               >
                 &rarr;
               </button>
+              
             </form>
+
+            <p className='text-[4vw]'>Join our community! Get the latest news, events, and special offers straight to your inbox.</p>
           
           </div>
 
@@ -60,8 +63,8 @@ const PhoneFooter = () => {
 
      
      <div>
-       <h3 className="font-bold text-orange-500 text-lg mb-2">Company</h3>
-       <ul className=" text-[#000] leading-5  ">
+       <h3 className="font-bold text-black text-lg md:mb-2">Company</h3>
+       <ul className=" text-[#000] leading-5 py-4 ">
               <li className='Navbar w-fit after:bg-[#000]  '>Home</li>
               <li className='Navbar w-fit after:bg-[#000]  '>Communities</li>
               <li className='Navbar w-fit after:bg-[#000]  '>Event</li>
@@ -73,9 +76,9 @@ const PhoneFooter = () => {
     </div>
 
     <div className="space-x-6   text-[#000]  ">
-            <Link className='Navbar w-fit  text-[1.2vw] ' path="" >Terms</Link>
-            <Link className='Navbar w-fit  text-[1.2vw] ' path="" >Privacy</Link>
-            <Link className='Navbar w-fit  text-[1.2vw] ' path="" >Cookies</Link>
+            <Link className='Navbar w-fit  text-[3vw] md:text-[1.2vw] ' path="" >Terms</Link>
+            <Link className='Navbar w-fit  text-[3vw] md:text-[1.2vw] ' path="" >Privacy</Link>
+            <Link className='Navbar w-fit  text-[3vw] md:text-[1.2vw] ' path="" >Cookies</Link>
     </div>
          
          

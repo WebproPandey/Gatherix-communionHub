@@ -57,17 +57,17 @@ const Faq = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6">
-      <h2 className="text-3xl font-semibold text-center mb-6">Frequently Asked Questions</h2>
+      <h2 className="text-[4vw] md:text-3xl font-semibold text-center mb-6 text-white">Frequently Asked Questions</h2>
       {faqData.map((section, sectionIndex) => (
         <div key={sectionIndex} className="mb-8">
-          <h3 className="text-2xl font-semibold text-white mb-4">{section.category}</h3>
+          <h3 className="text-[4vw] md:text-2xl font-semibold text-white mb-4">{section.category}</h3>
           <div className="space-y-4">
             {section.questions.map((item, index) => {
               const isOpen = openIndex === `${sectionIndex}-${index}`;
               return (
                 <div key={index} className="border border-gray-300 rounded-lg">
                   <button
-                    className="w-full flex justify-between items-center p-4 text-left text-lg font-medium text-white hover:bg-black/30 transition"
+                    className="w-full flex justify-between items-center p-4 text-left text-[3vw] md:text-lg font-medium text-white hover:bg-black/30 transition"
                     onClick={() => toggleQuestion(`${sectionIndex}-${index}`)}
                   >
                     {item.question}

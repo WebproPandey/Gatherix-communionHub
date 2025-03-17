@@ -4,14 +4,13 @@ import Home from './Pages/Home'
 import EventsPage from './Pages/CreateEventsPage'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
-import Extraspace from './Components/Extraspace'
 import DiscoverEvent from './Pages/DescoverEvent'
 import { ToastContainer } from "react-toastify"; 
 import "react-toastify/dist/ReactToastify.css"; 
 
 const App = () => {
   return (
-    <div className='w-full  relative  '>
+    <div className='w-full  relative '>
       <Navbar/>
       <ToastContainer position="top-right" autoClose={3000} />
 
@@ -22,7 +21,6 @@ const App = () => {
       </Routes>
       <div className=' FooterSection w-full  md:px-[5vw] md:py-[3vw] relative  px-3   ' >
         <Footer/>
-        <Extraspace/>
       </div>
 
     </div>

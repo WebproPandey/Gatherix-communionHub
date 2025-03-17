@@ -62,6 +62,8 @@ useEffect(()=>{
                 &rarr;
               </button>
             </form>
+            <p className='text-[1.2vw] text-black'>Join our community! Get the latest news, events, and special offers straight to your inbox.</p>
+
           
           </div>
         </div>

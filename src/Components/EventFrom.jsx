@@ -72,6 +72,22 @@ const EventForm = () => {
         localStorage.setItem("events", JSON.stringify(eventsArray));
 
         toast.success("Event Created and Saved Successfully!");
+
+        setEventData({
+          eventName: "",
+          eventFormat: "In Person",
+          startDate: "2025-03-16T12:00",
+          endDate: "2025-03-16T13:00",
+          timezone: "GMT+5:30",
+          location: "",
+          eventType: "Free",
+          capacity: "Unlimited",
+          categories: [],
+          description: "",
+          image: null,
+          visibility: "Anyone",
+          hideRSVPs: false,
+        })
       };
   return (
     <div className="w-full px-[4vw] mx-auto p-6 bg-white shadow-lg rounded-lg">
